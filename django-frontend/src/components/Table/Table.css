@@ -1,0 +1,50 @@
+.table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));;
+
+  border: 1.5px solid #eef3f5;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 6px 16px -12px rgba(31, 46, 56, 0.125);
+}
+
+.col {
+  height: 100%;
+
+}
+
+.table-header {
+  text-transform: capitalize;
+  font-size: .85rem;
+  padding: .5rem 1rem;
+  font-weight: 700;
+  color: #8995a0;
+}
+
+.table-content {
+  background-color: #fff;
+  padding: .5rem 1rem;
+}
+
+
+
+.table-content:nth-child(2){
+  background-color: #f7f9fa;
+  border-top: .5px solid #e4eaee;
+  border-bottom: .5px solid #e4eaee;
+}
+
+
+
+.table-controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+
+input[type=search] {
+  padding: .45rem .75rem;
+  min-width: 16rem;
+  border-radius: 8px;
+  border: 1.5px solid #e3e5e9
+}

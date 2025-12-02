@@ -1,0 +1,23 @@
+.document {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+main {
+  background-color: #fafbfc;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  gap: 2rem;
+}
+
+article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem
+}

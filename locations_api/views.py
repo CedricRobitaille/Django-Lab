@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import generics
-from .serualizers import LocationSerializer
+from .serializers import LocationSerializer
 from .models import Location
 
 class LocationList(generics.ListCreateAPIView):

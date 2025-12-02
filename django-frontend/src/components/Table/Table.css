@@ -44,7 +44,12 @@
 
 input[type=search] {
   padding: .45rem .75rem;
-  min-width: 16rem;
+  min-width: 22rem;
   border-radius: 8px;
-  border: 1.5px solid #e3e5e9
+  outline: 1.5px solid #e3e5e9;
+  border: none;
+}
+
+input[type=search]:focus {
+  outline: 1.5px solid #a6afc2;
 }

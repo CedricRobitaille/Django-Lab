@@ -9,6 +9,14 @@ class CompanyList(generics.ListCreateAPIView):
   queryset = Company.objects.all().order_by("id")
   serializer_class = CompanySerializer
 
-class CompanyDetail(generics.RetrieveUpdateDestroyAPIView):
+class CompanyDetailById(generics.RetrieveUpdateDestroyAPIView):
   queryset = Company.objects.all().order_by("id")
   serializer_class = CompanySerializer
+  lookup_field = 'pk'
+  loopup_url_kwarg = 'pk'
+
+class CompanyDetailByString(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Company.objects.all().order_by("id")
+  serializer_class = CompanySerializer
+  lookup_field = 'name'
+  loopup_url_kwarg = 'name'

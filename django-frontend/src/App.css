@@ -6,6 +6,15 @@
 }
 
 
+header h1 {
+  border-bottom: 1px solid #d7e1eb;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
 section {
   background-color: #fafbfc;
   padding: 2rem;

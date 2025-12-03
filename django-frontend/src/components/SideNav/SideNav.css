@@ -1,11 +1,40 @@
 nav {
   padding: 1rem 1rem;
   height: 100%;
-  background-color: #f0f3f5;
+  background-color: #f2f5f7;
 }
 
 nav ul {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
+}
+
+nav button {
+  padding: .8rem 0rem .75rem;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  min-width: 10rem;
+  border-radius: 8px;
+  transition: .25s;
+  border-bottom: 2px solid transparent;
+  font-weight: 700;
+}
+
+nav button:hover {
+  background-color: #e4eaee;
+}
+
+nav button.active {
+  border-bottom: 2px solid #a5b0c2;
+  background-color: #e4eaee;
+}
+
+nav button.active:hover {
+  background-color: #d5dfe6;
 }

@@ -1,57 +1,8 @@
 import { useEffect, useState } from "react"
 import "./Table.css"
+const Table = ({ view, handleSearch, handleSearchInput, tableContents, headers, search }) => {
 
-const Table = ({ view }) => {
-
-  const [tableContents, setTableContents] = useState([])
-  const [headers, setHeaders] = useState([])
-  const [search, setSearch] = useState("")
-
-  useEffect(() => {
-    const loadTableData = async () => {
-      view === "company" ?
-        setHeaders(["name", "industry"]) :
-        setHeaders(["Street Number", "Street", "City", "State"])
-
-      try {
-        const response = await fetch(`http://localhost:8000/api/${view}`)
-        if (!response.ok) {
-          throw new Error("HTTP Error! Status: " + response.status)
-        }
-        const data = await response.json();
-        console.log(typeof data)
-        if (data.length < 2) {
-          data = [data]
-        }
-        console.log(data)
-        setTableContents(data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-
-    loadTableData()
-  }, [])
-
-  const handleSearch = async (e) => {
-    e.preventDefault()
-    try {
-      const response = await fetch(`http://localhost:8000/api/${view}/${search}`)
-      if (!response.ok) {
-        throw new Error("HTTP Error! Status: " + response.status)
-      }
-      let data = await response.json();
-      data = [data]
-      console.log(data)
-      setTableContents(data)
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
-  const handleSearchInput = (e) => {
-    setSearch(e.target.value)
-  }
+  
 
   return (
     <article>

@@ -6,12 +6,17 @@
 }
 
 
-
-main {
+section {
   background-color: #fafbfc;
   padding: 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
+  gap: 2rem
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr auto;
   height: 100%;
   gap: 2rem;
 }
